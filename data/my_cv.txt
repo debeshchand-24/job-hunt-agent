@@ -1,0 +1,22 @@
+# My CV
+
+Paste your CV content here. This file is used by the CV Customiser Agent
+to tailor your resume for each job application.
+
+---
+
+Name:
+Email:
+Phone:
+LinkedIn:
+Location:
+
+Summary:
+
+Experience:
+
+Education:
+
+Skills:
+
+Certifications:

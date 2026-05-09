@@ -1,0 +1,11 @@
+anthropic
+playwright
+beautifulsoup4
+requests
+gspread
+google-auth
+google-auth-oauthlib
+google-api-python-client
+python-dotenv
+schedule
+loguru

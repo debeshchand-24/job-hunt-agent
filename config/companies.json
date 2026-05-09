@@ -1,0 +1,202 @@
+{
+  "companies": [
+    {
+      "name": "Google",
+      "careers_url": "https://www.google.com/about/careers/applications/jobs/results/?q=Product+Manager&location=Bangalore%2C+India&hl=en-GB",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": true,
+      "notes": "JS rendered - use Playwright",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Uber",
+      "careers_url": "https://www.uber.com/in/en/careers/list/?location=IND-Karn%C4%81taka-Bangalore&department=Product",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": true,
+      "notes": "JS rendered - use Playwright",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Adobe",
+      "careers_url": "https://careers.adobe.com/us/en/c/engineering-and-product-jobs",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": false,
+      "notes": "JS rendered - use Playwright",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Acko",
+      "careers_url": "https://www.acko.com/careers/jobs/",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": false,
+      "notes": "Next.js SSR - jobs load via JS, use Playwright",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Paytm",
+      "careers_url": "https://jobs.lever.co/paytm?location=Bangalore%2C%20Karnataka&department=Product",
+      "type": "static",
+      "enabled": true,
+      "url_filtered": true,
+      "notes": "Lever ATS - consistent structure",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Amazon",
+      "careers_url": "https://amazon.jobs/content/en/job-categories/project-program-product-management-technical?city%5B%5D=Bengaluru&keyword%5B%5D=product",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": true,
+      "notes": "JS rendered - use Playwright",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Swiggy",
+      "careers_url": "https://careers.swiggy.com/#/careers?career_page_category=Technology&location=Bangalore&search=title:Product",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": false,
+      "notes": "JS rendered - use Playwright",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Flipkart",
+      "careers_url": "https://flipkart.turbohire.co/dashboardv2?orgId=4d757ba0-3d57-448a-b82c-238ed87ac90f&type=0",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": false,
+      "notes": "TurboHire ATS - JS rendered",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Zepto",
+      "careers_url": "https://zepto.talentrecruit.com/career-page",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": false,
+      "notes": "TalentRecruit ATS",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "PhonePe",
+      "careers_url": "https://www.phonepe.com/careers/job-openings/",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": false,
+      "notes": "JS rendered - use Playwright",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "UrbanCompany",
+      "careers_url": "https://careers.urbancompany.com/jobs",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": false,
+      "notes": "JS rendered - use Playwright",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Meesho",
+      "careers_url": "https://www.meesho.io/jobs?d=product-design",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": false,
+      "notes": "JS rendered - use Playwright",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Razorpay",
+      "careers_url": "https://razorpay.com/jobs/jobs-all/",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": false,
+      "notes": "JS rendered - use Playwright",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Groww",
+      "careers_url": "https://job-boards.eu.greenhouse.io/groww?offices%5B%5D=4018978101",
+      "type": "static",
+      "enabled": true,
+      "url_filtered": false,
+      "notes": "Greenhouse ATS - consistent static structure",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Microsoft",
+      "careers_url": "https://apply.careers.microsoft.com/careers?query=Product+Management&start=0&location=India%2C+Karnataka%2C+Bangalore&pid=1970393556826633&sort_by=relevance&filter_distance=160&filter_include_remote=1",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": true,
+      "notes": "JS rendered - use Playwright",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Atlassian",
+      "careers_url": "https://www.atlassian.com/company/careers/all-jobs?team=Product%20Management&location=&search=",
+      "type": "javascript",
+      "enabled": true,
+      "url_filtered": false,
+      "notes": "JS rendered - use Playwright",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "LinkedIn",
+      "careers_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Manager&location=Bengaluru",
+      "type": "linkedin",
+      "enabled": false,
+      "url_filtered": true,
+      "notes": "Disabled - requires special handling, enable later",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Fam",
+      "careers_url": "",
+      "type": "static",
+      "enabled": false,
+      "url_filtered": false,
+      "notes": "URL not available yet - disabled",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Clear",
+      "careers_url": "",
+      "type": "static",
+      "enabled": false,
+      "url_filtered": false,
+      "notes": "URL not available yet - disabled",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Truemeds",
+      "careers_url": "",
+      "type": "static",
+      "enabled": false,
+      "url_filtered": false,
+      "notes": "URL not available yet - disabled",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Nielsen",
+      "careers_url": "",
+      "type": "static",
+      "enabled": false,
+      "url_filtered": false,
+      "notes": "URL not available yet - disabled",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    },
+    {
+      "name": "Juspay",
+      "careers_url": "",
+      "type": "static",
+      "enabled": false,
+      "url_filtered": false,
+      "notes": "URL not available yet - disabled",
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+    }
+  ]
+}
