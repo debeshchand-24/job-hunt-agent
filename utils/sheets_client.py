@@ -9,7 +9,8 @@ COLUMNS = [
     "job_id", "company", "role", "url", "jd_raw",
     "posted_date", "location", "status",
     "extracted_skills",
-    "match_score", "strong_areas", "weak_areas",
+    "match_score", "match_tier", "priority",
+    "strong_areas", "weak_areas", "cv_version",
     "doc_tab_url",
 ]
 
@@ -56,3 +57,16 @@ class SheetsClient:
         if cell is None:
             raise LookupError(f"job_id {job_id!r} not found in sheet")
         self._ws.update_cell(cell.row, col_idx, value)
+
+    def batch_update_row(self, job_id: str, updates: dict) -> None:
+        """Update multiple columns in one row in a single find + N cell writes."""
+        unknown = [k for k in updates if k not in COLUMNS]
+        if unknown:
+            raise ValueError(f"Unknown columns: {unknown}")
+        cell = self._ws.find(job_id, in_column=1)
+        if cell is None:
+            raise LookupError(f"job_id {job_id!r} not found in sheet")
+        row = cell.row
+        for col_name, value in updates.items():
+            col_idx = COLUMNS.index(col_name) + 1
+            self._ws.update_cell(row, col_idx, value)

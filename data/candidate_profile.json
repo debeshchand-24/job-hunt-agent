@@ -1,0 +1,225 @@
+{
+  "name": "Debesh Chand",
+  "current_title": "Director of Product (Growth & Acquisitions)",
+  "total_experience_years": 10,
+  "product_experience_years": 8,
+  "skills": {
+    "core_pm_skills": [
+      "Funnel Optimization",
+      "Growth Strategy",
+      "A/B Testing & Experimentation",
+      "Conversion Rate Optimization (CRO)",
+      "Monetization Design",
+      "Referral & Loyalty Mechanics",
+      "Trial-to-Paid Conversion",
+      "Subscription Growth",
+      "0\u21921 Product Development",
+      "Experiment Design",
+      "Cohort Analysis",
+      "Attribution Modeling",
+      "User Research & Discovery",
+      "Roadmap Prioritization",
+      "Stakeholder Management"
+    ],
+    "technical_skills": [
+      "GA4",
+      "Tableau",
+      "Clevertap",
+      "SQL",
+      "Multi-tenant CMS Architecture",
+      "Experimentation Platform (in-house build)",
+      "CRM Automation",
+      "Marketing Automation",
+      "Lead Scoring Models",
+      "S2S Integrations",
+      "LLM/AI Product Systems",
+      "AI-enabled Revenue Systems",
+      "Call Intelligence (AI)",
+      "Self-serve Checkout Architecture"
+    ],
+    "domain_skills": [
+      "EdTech Growth",
+      "Hospitality/Travel Tech",
+      "Loyalty Program Design",
+      "Affiliate Platform Building",
+      "Organic & Paid Acquisition",
+      "Content-led Acquisition",
+      "Alumni & Referral Engines",
+      "Offline Channel Product",
+      "UK Market Expansion",
+      "Telecom Systems (legacy)"
+    ],
+    "soft_skills": [
+      "Cross-functional Leadership",
+      "Executive Stakeholder Management",
+      "Team Building",
+      "Strategic Prioritization",
+      "Influence without Authority",
+      "Data-driven Decision Making",
+      "Org Design & Pod Structuring"
+    ]
+  },
+  "domains": [
+    {
+      "name": "EdTech",
+      "depth": "deep",
+      "years": "5"
+    },
+    {
+      "name": "Hospitality / Travel Tech",
+      "depth": "deep",
+      "years": "3"
+    },
+    {
+      "name": "Telecom / Enterprise Software",
+      "depth": "surface",
+      "years": "2"
+    }
+  ],
+  "role_types_experience": [
+    "growth",
+    "consumer",
+    "acquisition",
+    "conversion optimization",
+    "loyalty & subscriptions",
+    "platform",
+    "0-to-1"
+  ],
+  "seniority_profile": {
+    "current_level": "Director",
+    "team_size_managed": "10",
+    "budget_owned": "\u20b9130 Cr+ quarterly portfolio",
+    "leadership_evidence": [
+      "Led 10-member cross-functional org (PMs, designers, UX writers) at upGrad",
+      "Promoted 3 times in 5 years (PM II \u2192 Director) at upGrad",
+      "Promoted PM I \u2192 PM II at OYO",
+      "Restructured siloed PM org into journey pods with clear metric ownership",
+      "Aligned CXO stakeholders on milestone-based experimentation plans",
+      "Led team of 8 to build content + free-resources acquisition engine",
+      "Convinced engineering leadership to scope in-house experimentation platform org-wide",
+      "Managed audit team reduction from 8 to 2 via AI call intelligence"
+    ]
+  },
+  "key_achievements": [
+    {
+      "description": "Drove visitor-to-lead conversion by rebuilding acquisition funnel, separating paid and organic experiences",
+      "metric": "3% \u2192 12% overall; paid conversion 2% \u2192 9%",
+      "domain": "upGrad"
+    },
+    {
+      "description": "Unlocked incremental quarterly revenue on flat traffic through funnel re-architecture",
+      "metric": "\u20b920 Cr+ incremental quarterly revenue",
+      "domain": "upGrad"
+    },
+    {
+      "description": "Engineered viral referral growth loop replacing manual process with scalable multi-tenant engine",
+      "metric": "15% of BU revenue (\u20b945 Cr annually) at 3\u00d7 lower CAC",
+      "domain": "upGrad"
+    },
+    {
+      "description": "Shipped 7-day free trial with progressive feature discovery and timed conversion nudges",
+      "metric": "32% revenue lift, \u20b98.3 Cr \u2192 \u20b910.9 Cr quarterly",
+      "domain": "upGrad"
+    },
+    {
+      "description": "Created LLM-powered AI career risk platform reaching professionals outside upGrad's TAM",
+      "metric": "40K leads/month, \u20b96.7 Cr incremental quarterly revenue",
+      "domain": "upGrad"
+    },
+    {
+      "description": "Architected AI-driven call intelligence system aligning sales and quality teams",
+      "metric": "Pitch scores up 30%, call-to-payment up 15%, audit team reduced 8\u21922 in 6 months",
+      "domain": "upGrad"
+    },
+    {
+      "description": "Launched OYO Wizard loyalty membership program from scratch",
+      "metric": "Scaled to 1M+ paid members annually, member LTV improved 2.2x",
+      "domain": "OYO"
+    },
+    {
+      "description": "Rebuilt OYO booking discovery funnel across 20L+ DAU platform",
+      "metric": "Booking conversion 8% \u2192 16%",
+      "domain": "OYO"
+    },
+    {
+      "description": "Built upGrad offline channel product from zero",
+      "metric": "\u20b910.8 Cr quarterly revenue across 40+ stores",
+      "domain": "upGrad"
+    },
+    {
+      "description": "Rejected external experimentation vendor and built in-house traffic-splitting service",
+      "metric": "\u20b960L+ per year in licence cost savings",
+      "domain": "upGrad"
+    },
+    {
+      "description": "Built content + free-resources acquisition engine targeting segment invisible to paid channels",
+      "metric": "\u20b96 Cr quarterly revenue at near-zero CAC",
+      "domain": "upGrad"
+    },
+    {
+      "description": "Resolved UK market pilot churn and scaled hotel supply through owner trust-building",
+      "metric": "2,000+ rooms onboarded in 6 months, NPS doubled 4 \u2192 8",
+      "domain": "OYO"
+    }
+  ],
+  "education": {
+    "degree": "P.G.D.M. (M.B.A.)",
+    "field": "Marketing and Strategy",
+    "institution": "IIM Lucknow",
+    "tier": "tier1",
+    "has_mba": true,
+    "has_masters": true
+  },
+  "companies_worked": [
+    {
+      "name": "upGrad",
+      "type": "startup",
+      "domain": "EdTech",
+      "role": "Director of Product (Growth & Acquisitions)",
+      "years": "5"
+    },
+    {
+      "name": "OYO",
+      "type": "startup",
+      "domain": "Hospitality / Travel Tech",
+      "role": "Product Manager",
+      "years": "3"
+    },
+    {
+      "name": "Amdocs",
+      "type": "bigtech",
+      "domain": "Telecom / Enterprise Software",
+      "role": "Software Developer",
+      "years": "2"
+    }
+  ],
+  "career_trajectory": "Engineering-to-MBA-to-PM arc with 8 years of progressive product leadership in high-growth consumer startups (OYO, upGrad), specialising in growth, funnel optimisation, and subscription monetisation, now operating at Director level owning large cross-functional orgs and multi-crore revenue portfolios.",
+  "strongest_for_roles": [
+    "Director / Head of Product Growth",
+    "Growth PM / Lead PM (Acquisition & Conversion)",
+    "Subscription & Loyalty Product Lead",
+    "Consumer Platform PM (marketplace, edtech, travel)",
+    "AI-enabled Product & Revenue Systems Lead"
+  ],
+  "target_seniority": {
+    "startups_consumer": [
+      "Associate Director Product",
+      "Director Product",
+      "Group PM",
+      "Principal PM"
+    ],
+    "big_tech": [
+      "Lead PM",
+      "Senior Product Manager",
+      "SPM"
+    ]
+  },
+  "red_flags_for_jd_matching": [
+    "No pure B2B SaaS or enterprise product experience",
+    "No experience in fintech, healthtech, or deep-tech verticals",
+    "Limited exposure to very early stage (pre-product-market-fit) 0-to-1 startups",
+    "Engineering background is pre-MBA and non-recent; not suitable for highly technical infrastructure or developer-tools PMs roles",
+    "All experience is India-centric (except limited UK market exposure at OYO); may be a mismatch for senior roles requiring deep Western market product intuition",
+    "SQL described as working knowledge only; not suitable for roles requiring heavy data engineering collaboration"
+  ]
+}

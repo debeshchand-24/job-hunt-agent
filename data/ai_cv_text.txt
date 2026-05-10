@@ -1,0 +1,80 @@
+DEBESH CHAND
+PRODUCT LEADER | EX-UPGRAD • EX-OYO | IIM LUCKNOW
+debesh.chand@iiml.org | +91 7875712540 | https://www.linkedin.com/in/debesh-chand/
+SUMMARY
+Product leader with 8+ years in product (10 years total), owning B2C growth portfolios across acquisition,
+conversion, and retention — with proven depth in AI-powered product thinking, experimentation, and funnel
+optimisation. Led a 10-member cross-functional org at upGrad across a ₹130 Cr+ quarterly portfolio; scaled
+OYO Wizard to 1M+ paid members. Prioritise step-change bets while maintaining a balance of high-velocity
+incremental wins.
+CAREER HIGHLIGHTS
+3% → 12% ₹20 Cr+/qtr ₹60L+/year 1M+ 20L+ DAU
+visitor-to-lead revenue unlocked tooling costs paid loyalty consumer platform
+conversion (upGrad) on flat traffic (upGrad) saved (upGrad) members (OYO) owned (OYO)
+PROFESSIONAL EXPERIENCE
+upGrad, Director of Product (Growth & Acquisitions) - Bengaluru Apr 2021 - Mar 2026
+Led 10-member org (PMs, designers, UX writers) across acquisition, conversion, and assisted revenue.
+Promoted from PM II → Director (3 promotions in 5 years)
+Architected an AI-powered decisioning layer for sales quality — automated call scoring and behavioural
+assessment via 100+ validated rubrics; pitch scores up 30%, call-to-payment up 15%, audit team 8→2
+Created an LLM-powered behavioural scoring platform — cohort-based career risk modeling reaching
+professionals outside upGrad's TAM; 40K leads/month, ₹6.7 Cr incremental quarterly revenue
+Drove visitor-to-lead conversion 3%→12% by rebuilding acquisition funnel around user decisions —
+separating paid and organic experiences was the critical unlock; paid conversion moved 2%→9%
+Unlocked ₹20 Cr incremental quarterly revenue on flat traffic through funnel re-architecture — managed
+CXO alignment via milestone-based experimentation plan with defined checkpoints
+Identified fence-sitter conversion pattern via call analysis; built a data-driven personalisation engine
+matching users to relevant alumni profiles — driving 10% uplift in lead-to-payment (~₹4.5 Cr quarterly)
+Diagnosed sampling anxiety as the activation barrier; shipped a 7-day onboarding journey with gated
+content and conversion nudges — delivering 32% revenue lift, ₹8.3 Cr → ₹10.9 Cr quarterly
+Engineered a viral growth loop by replacing a manual referral process with a scalable multi-tenant
+engine; referral channel scaled to 15% of BU revenue (₹45 Cr annually) at 3× lower CAC
+Pioneered upGrad's first self-serve checkout; identified conversion blockers, aligned payments and SAP
+teams to automate it — enabling 5% visitor-to-payment conversion without sales dependency
+Built org-wide A/B testing and experimentation platform from scratch — enabled rapid hypothesis testing
+and cohort-level iteration across all growth surfaces; eliminated ₹60L+/year vendor dependency
+Challenged over-reliance on late-stage conversion (~21% organic ceiling); pivoted to new acquisition
+surfaces — unlocking ₹8 Cr incremental revenue per quarter (10% of BU) within 2 quarters
+Overhauled siloed PM structure into journey pods (traffic → lead → payment) with clear metric ownership
+per pod — achieved 20% funnel conversion lift and 25% revenue per lead within 18 months
+Built the product stack for upGrad's offline channel from zero — countered CXO scope push with footfall
+data, locked phase 1; reached ₹10.8 Cr quarterly at 2% lead-to-payment across 40+ stores
+Diagnosed CAC ceiling from paid channels; led team of 8 to build a content + free-resources acquisition
+engine, reaching a segment invisible to paid — generating ₹6 Cr quarterly revenue at near-zero CAC
+Engineered a self-serve affiliate platform to eliminate 10-day onboarding bottleneck — cut TAT to 5 hrs,
+expanding to 30+ partners in 3 months, reaching ₹5 Cr quarterly revenue
+PROFESSIONAL EXPERIENCE (CONTINUED)
+OYO, Product Manager - Gurgaon Apr 2018 - Mar 2021
+Owned consumer booking journey, Wizard loyalty program & UK market expansion; promoted PM I → PM II
+Broke down and rebuilt OYO's booking discovery funnel across 20L+ DAU platform — use-case
+storefronts, map-based discovery, intent-driven filters; lifting booking conversion 8%→16%
+Tapped deal-seeking as OYO's core conversion behaviour; redesigned discovery with personalised offer
+zone and weekly time-gated mystery deals — yielding 3% net booking revenue uplift
+Solved zero-switching-cost churn by launching OYO Wizard — ₹99 membership with 5% recurring
+booking discount; scaled to 1M+ paid members annually, improving member LTV by 2.2x
+Deepened Wizard monetisation with 2 premium tiers (₹299) and a member referral programme —
+delivered 20% premium-tier sales penetration and 7% referral contribution to membership revenue
+Uncovered UK market fit gap; built hotel owner trust as new entrant through 40+ sessions and
+transparent scoping — resolved pilot churn, onboarded 2,000+ rooms in 6 months, NPS doubled 4→8
+Amdocs, Software Developer - Pune Jul 2014 - May 2016
+Developed large-scale telecom systems supporting customer lifecycle workflows for a global operator
+Re-architected plan-change & provisioning flows for a global telecom operator — ~17% adoption uplift
+and ~15% faster network activation
+Led quality system redesign across 40+ engineers, reducing defect density by ~35%
+SKILLS
+Growth & Experimentation - Growth Strategy, Funnel Optimization, A/B Testing & Experimentation,
+Conversion Rate Optimization (CRO), Experiment Design, Monetization Design, Referral & Loyalty Mechanics
+· 0→1 Product Development
+Analytics & Data - GA4, Tableau, Clevertap, SQL (working knowledge), Data Analysis, Cohort Analysis,
+Funnel Analytics, Attribution Modeling, User Research & Discovery
+AI & Platforms - AI Product Thinking, AI-enabled Revenue Systems, Lead Scoring Models, CRM Automation,
+Marketing Automation, Multi-tenant CMS Architecture, Experimentation Platform (in-house build) · S2S
+Integrations
+Leadership & Execution
+Cross-functional Leadership · Executive Stakeholder Management · Product Strategy · Team Building (PMs,
+Designers)
+EDUCATION
+P.G.D.M. (M.B.A.), IIM Lucknow Jun 2016 - Mar 2018
+Major in Marketing and Strategy | 7.06/10
+B.E., Jabalpur Engineering College Aug 2010 - May 2014
+Electronics and Communication | 76.5% (Hons.)

@@ -4,10 +4,24 @@
       "name": "Google",
       "careers_url": "https://www.google.com/about/careers/applications/jobs/results/?q=Product+Manager&location=Bangalore%2C+India&hl=en-GB",
       "type": "javascript",
-      "enabled": true,
+      "enabled": false,
+      "disabled_reason": "Bot detection active. Will solve with Apify integration in Phase 2 alongside LinkedIn.",
       "url_filtered": true,
       "notes": "JS rendered - use Playwright",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {
+        "title": "h3.QJPWVe",
+        "url": "a[href*='/jobs/results/']",
+        "container": "li"
+      },
+      "scraper_type": "api",
+      "pagination_type": "url",
+      "pagination_url_param": "page",
+      "pagination_increment": 1,
+      "max_jobs": 50,
+      "wait_time": 5000,
+      "scroll_and_retry": true
     },
     {
       "name": "Uber",
@@ -16,7 +30,11 @@
       "enabled": true,
       "url_filtered": true,
       "notes": "JS rendered - use Playwright",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Adobe",
@@ -25,7 +43,26 @@
       "enabled": true,
       "url_filtered": false,
       "notes": "JS rendered - use Playwright",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [
+        {
+          "type": "dropdown",
+          "selector": "button, div[role='button']",
+          "text": "Profession",
+          "wait_after": 1500
+        },
+        {
+          "type": "option",
+          "selector": "label, li, div[role='option']",
+          "text": "Product Management",
+          "wait_after": 2000
+        }
+      ],
+      "job_selectors": {},
+      "pagination_type": "url",
+      "pagination_url_param": "pg",
+      "pagination_increment": 1,
+      "max_jobs": 50
     },
     {
       "name": "Acko",
@@ -34,7 +71,24 @@
       "enabled": true,
       "url_filtered": false,
       "notes": "Next.js SSR - jobs load via JS, use Playwright",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [
+        {
+          "type": "dropdown",
+          "selector": "button, div[role='button']",
+          "text": "Technology",
+          "wait_after": 1500
+        },
+        {
+          "type": "option",
+          "selector": "label, li, div[role='option']",
+          "text": "Product",
+          "wait_after": 2000
+        }
+      ],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Paytm",
@@ -43,7 +97,11 @@
       "enabled": true,
       "url_filtered": true,
       "notes": "Lever ATS - consistent structure",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Amazon",
@@ -52,7 +110,11 @@
       "enabled": true,
       "url_filtered": true,
       "notes": "JS rendered - use Playwright",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Swiggy",
@@ -61,7 +123,11 @@
       "enabled": true,
       "url_filtered": false,
       "notes": "JS rendered - use Playwright",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Flipkart",
@@ -70,7 +136,26 @@
       "enabled": true,
       "url_filtered": false,
       "notes": "TurboHire ATS - JS rendered",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [
+        {
+          "type": "dropdown",
+          "selector": "button, div[role='button']",
+          "text": "Departments",
+          "wait_after": 1500
+        },
+        {
+          "type": "option",
+          "selector": "label, li, div[role='option']",
+          "text": "Product Management",
+          "wait_after": 2000
+        }
+      ],
+      "job_selectors": {},
+      "pagination_type": "url",
+      "pagination_url_param": "page",
+      "pagination_increment": 1,
+      "max_jobs": 50
     },
     {
       "name": "Zepto",
@@ -79,7 +164,11 @@
       "enabled": true,
       "url_filtered": false,
       "notes": "TalentRecruit ATS",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {},
+      "pagination_type": "scroll",
+      "max_jobs": 50
     },
     {
       "name": "PhonePe",
@@ -88,7 +177,23 @@
       "enabled": true,
       "url_filtered": false,
       "notes": "JS rendered - use Playwright",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [
+        {
+          "type": "sidebar",
+          "selector": "li.sidebar-item:has-text('Product Management')",
+          "text": "Product Management",
+          "wait_after": 3000
+        }
+      ],
+      "filter_method": "js_injection",
+      "job_selectors": {
+        "title": "div.col-span-5",
+        "url": "a[href*='career']",
+        "container": "div.col-span-5"
+      },
+      "pagination_type": "scroll",
+      "max_jobs": 50
     },
     {
       "name": "UrbanCompany",
@@ -97,7 +202,24 @@
       "enabled": true,
       "url_filtered": false,
       "notes": "JS rendered - use Playwright",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [
+        {
+          "type": "dropdown",
+          "selector": "button, div[role='button']",
+          "text": "All Departments",
+          "wait_after": 1500
+        },
+        {
+          "type": "option",
+          "selector": "label, li, div[role='option']",
+          "text": "Product",
+          "wait_after": 2000
+        }
+      ],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Meesho",
@@ -106,7 +228,18 @@
       "enabled": true,
       "url_filtered": false,
       "notes": "JS rendered - use Playwright",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {
+        "title": "div.col-span-5",
+        "url": "a",
+        "container": "div.col-span-5"
+      },
+      "scroll_before_extract": true,
+      "scroll_steps": 3,
+      "scroll_step_px": 500,
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Razorpay",
@@ -115,7 +248,18 @@
       "enabled": true,
       "url_filtered": false,
       "notes": "JS rendered - use Playwright",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [
+        {
+          "type": "sidebar",
+          "selector": "li.sidebar-item",
+          "text": "Product Management",
+          "wait_after": 3000
+        }
+      ],
+      "job_selectors": {},
+      "pagination_type": "scroll",
+      "max_jobs": 50
     },
     {
       "name": "Groww",
@@ -124,7 +268,11 @@
       "enabled": true,
       "url_filtered": false,
       "notes": "Greenhouse ATS - consistent static structure",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Microsoft",
@@ -133,7 +281,11 @@
       "enabled": true,
       "url_filtered": true,
       "notes": "JS rendered - use Playwright",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Atlassian",
@@ -142,16 +294,30 @@
       "enabled": true,
       "url_filtered": false,
       "notes": "JS rendered - use Playwright",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {
+        "title": "a[href*='/company/careers/details/']",
+        "url": "a[href*='/company/careers/details/']",
+        "container": "a[href*='/company/careers/details/']"
+      },
+      "base_url": "https://www.atlassian.com",
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "LinkedIn",
       "careers_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Manager&location=Bengaluru",
       "type": "linkedin",
       "enabled": false,
+      "disabled_reason": "Requires special handling. Will solve in Phase 2 with Google together.",
       "url_filtered": true,
       "notes": "Disabled - requires special handling, enable later",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Fam",
@@ -160,7 +326,11 @@
       "enabled": false,
       "url_filtered": false,
       "notes": "URL not available yet - disabled",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Clear",
@@ -169,7 +339,11 @@
       "enabled": false,
       "url_filtered": false,
       "notes": "URL not available yet - disabled",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Truemeds",
@@ -178,7 +352,11 @@
       "enabled": false,
       "url_filtered": false,
       "notes": "URL not available yet - disabled",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Nielsen",
@@ -187,7 +365,11 @@
       "enabled": false,
       "url_filtered": false,
       "notes": "URL not available yet - disabled",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     },
     {
       "name": "Juspay",
@@ -196,7 +378,11 @@
       "enabled": false,
       "url_filtered": false,
       "notes": "URL not available yet - disabled",
-      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"]
+      "filter_keywords": ["product manager", "pm", "product management", "apm", "associate product manager", "senior product manager", "group product manager", "vp product", "director of product", "head of product", "product lead"],
+      "filter_clicks": [],
+      "job_selectors": {},
+      "pagination_type": "none",
+      "max_jobs": 50
     }
   ]
 }
