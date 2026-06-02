@@ -163,7 +163,8 @@ class AdminAgent:
         good   = [r for r in rows if r.get("match_tier") == "good"]
         ok     = [r for r in rows if r.get("match_tier") == "ok"]
         weak   = [r for r in rows if r.get("status") == "weak_match"]
-        matched_count = len(strong) + len(good) + len(ok)
+        matched_count    = len(strong) + len(good) + len(ok)
+        irrelevant_count = sum(1 for r in rows if r.get("status") == "irrelevant")
 
         date_str = str(self.run_date)
 
@@ -239,6 +240,7 @@ class AdminAgent:
             f"Extracted:             {pipeline_stats.get('extracted', 0)}",
             f"Matched:               {pipeline_stats.get('matched', 0)}",
             f"CV customised:         {pipeline_stats.get('cv_customised', 0)}",
+            f"Auto-rejected:         {irrelevant_count} (wrong domain/role — not PM roles)",
         ]
 
         if errors:
@@ -293,7 +295,7 @@ class AdminAgent:
 
     def get_pipeline_stats(self) -> dict:
         rows = self.sheets.get_all_rows()
-        counts: dict = {s: 0 for s in ("new", "extracted", "matched", "cv_ready", "weak_match")}
+        counts: dict = {s: 0 for s in ("new", "extracted", "matched", "cv_ready", "weak_match", "irrelevant")}
         strong = good = ok = 0
         for r in rows:
             status = r.get("status", "")
@@ -316,6 +318,7 @@ class AdminAgent:
             "matched":        counts.get("matched", 0),
             "cv_ready":       counts.get("cv_ready", 0),
             "weak_match":     counts.get("weak_match", 0),
+            "irrelevant":     counts.get("irrelevant", 0),
             "strong_matches": strong,
             "good_matches":   good,
             "ok_matches":     ok,

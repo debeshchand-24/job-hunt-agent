@@ -1,3 +1,12 @@
 .env
 token.json
 credentials.json
+data/*.pdf
+data/*.txt
+data/candidate_profile.json
+data/context_doc.txt
+logs/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store

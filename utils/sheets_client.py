@@ -10,7 +10,7 @@ COLUMNS = [
     "posted_date", "location", "status",
     "extracted_skills",
     "match_score", "match_tier", "priority",
-    "strong_areas", "weak_areas", "cv_version",
+    "strong_areas", "weak_areas", "score_breakdown", "cv_version",
     "doc_tab_url",
 ]
 

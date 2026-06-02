@@ -356,34 +356,76 @@ class MatchingAgent:
         result["_claude_trigger"] = result.get("trigger_cv_customisation")
         result["_claude_apply"]   = result.get("apply_recommended")
 
-        # Enforce deterministic tier + action rules — do not trust Claude's booleans
-        total_score = result.get("total_score", 0)
-        if total_score >= 85:
-            result["match_tier"]               = "strong"
-            result["trigger_cv_customisation"] = True
-            result["apply_recommended"]        = True
-            result["priority"]                 = True
-        elif total_score >= 70:
-            result["match_tier"]               = "good"
-            result["trigger_cv_customisation"] = True
-            result["apply_recommended"]        = True
-            result["priority"]                 = False
-        elif total_score >= 60:
-            result["match_tier"]               = "ok"
-            result["trigger_cv_customisation"] = True
-            result["apply_recommended"]        = True
-            result["priority"]                 = False
-        else:
-            result["match_tier"]               = "weak"
+        # Core dimension minimum check — all three very low means wrong domain/role
+        _CORE_SKILLS_MIN = 10  # out of 30
+        _CORE_DOMAIN_MIN = 5   # out of 15
+        _CORE_ROLE_MIN   = 4   # out of 15
+
+        skills_score    = result.get("skills_score", 0)
+        domain_score    = result.get("domain_score", 0)
+        role_type_score = result.get("role_type_score", 0)
+
+        core_fail = (
+            skills_score    < _CORE_SKILLS_MIN and
+            domain_score    < _CORE_DOMAIN_MIN and
+            role_type_score < _CORE_ROLE_MIN
+        )
+
+        if core_fail:
+            result["match_tier"]               = "irrelevant"
             result["trigger_cv_customisation"] = False
             result["apply_recommended"]        = False
             result["priority"]                 = False
+            result["total_score"]              = min(result.get("total_score", 0), 40)
+            logger.info(
+                f"Auto-rejected {role} at {company}: core dimensions too low "
+                f"(skills:{skills_score} domain:{domain_score} role:{role_type_score})"
+                f" — likely wrong domain/role"
+            )
+        else:
+            # Enforce deterministic tier + action rules — do not trust Claude's booleans
+            total_score = result.get("total_score", 0)
+            if total_score >= 85:
+                result["match_tier"]               = "strong"
+                result["trigger_cv_customisation"] = True
+                result["apply_recommended"]        = True
+                result["priority"]                 = True
+            elif total_score >= 70:
+                result["match_tier"]               = "good"
+                result["trigger_cv_customisation"] = True
+                result["apply_recommended"]        = True
+                result["priority"]                 = False
+            elif total_score >= 60:
+                result["match_tier"]               = "ok"
+                result["trigger_cv_customisation"] = True
+                result["apply_recommended"]        = True
+                result["priority"]                 = False
+            else:
+                result["match_tier"]               = "weak"
+                result["trigger_cv_customisation"] = False
+                result["apply_recommended"]        = False
+                result["priority"]                 = False
 
         logger.info(
-            f"Score {total_score}: tier={result['match_tier']} "
+            f"Score {result.get('total_score', 0)}: tier={result['match_tier']} "
             f"cv_trigger={result['trigger_cv_customisation']} "
             f"priority={result['priority']} (threshold rules applied)"
         )
+
+        result["score_breakdown"] = {
+            "skills":      result.get("skills_score", 0),
+            "experience":  result.get("experience_score", 0),
+            "role_type":   result.get("role_type_score", 0),
+            "domain":      result.get("domain_score", 0),
+            "seniority":   result.get("seniority_score", 0),
+            "leadership":  result.get("leadership_score", 0),
+            "others":      result.get("others_score", 0),
+            "total":       result.get("total_score", 0),
+            "tier":        result.get("match_tier", ""),
+            "reasoning":   result.get("reasoning", ""),
+            "absent_areas": result.get("absent_areas", []),
+            "which_cv":    result.get("which_cv_used", ""),
+        }
 
         result["_usage"]      = usage
         result["_match_mode"] = match_mode
@@ -396,15 +438,21 @@ class MatchingAgent:
     def update_sheet(self, job_id: str, match_result: dict):
         total_score = match_result.get("total_score", 0)
         match_tier  = match_result.get("match_tier", "weak")
-        status      = "matched" if match_tier in ("strong", "good", "ok") else "weak_match"
+        if match_tier == "irrelevant":
+            status = "irrelevant"
+        elif match_tier in ("strong", "good", "ok"):
+            status = "matched"
+        else:
+            status = "weak_match"
         self.sheets.batch_update_row(job_id, {
-            "match_score":  str(total_score),
-            "match_tier":   match_tier,
-            "priority":     str(match_result.get("priority", False)),
-            "strong_areas": json.dumps(match_result.get("strong_areas", [])),
-            "weak_areas":   json.dumps(match_result.get("weak_areas", [])),
-            "cv_version":   match_result.get("which_cv_used", ""),
-            "status":       status,
+            "match_score":     str(total_score),
+            "match_tier":      match_tier,
+            "priority":        str(match_result.get("priority", False)),
+            "strong_areas":    json.dumps(match_result.get("strong_areas", [])),
+            "weak_areas":      json.dumps(match_result.get("weak_areas", [])),
+            "score_breakdown": json.dumps(match_result.get("score_breakdown", {})),
+            "cv_version":      match_result.get("which_cv_used", ""),
+            "status":          status,
         })
         logger.info(
             f"Updated sheet for job_id: {job_id} "
@@ -444,7 +492,7 @@ class MatchingAgent:
             return
 
         total      = len(jobs)
-        tiers      = {"strong": 0, "good": 0, "ok": 0, "weak": 0}
+        tiers      = {"strong": 0, "good": 0, "ok": 0, "weak": 0, "irrelevant": 0}
         cv_trigger = 0
 
         for i, job in enumerate(jobs, start=1):
@@ -471,9 +519,13 @@ class MatchingAgent:
                 continue
 
             usage = match_result.get("_usage", {})
+            bd    = match_result.get("score_breakdown", {})
             logger.info(
-                f"  Score: {match_result.get('total_score')} "
-                f"({match_result.get('match_tier')})  |  "
+                f"  Score: {match_result.get('total_score')} ({match_result.get('match_tier')}) | "
+                f"Skills:{bd.get('skills')} Exp:{bd.get('experience')} "
+                f"Role:{bd.get('role_type')} Domain:{bd.get('domain')} "
+                f"Seniority:{bd.get('seniority')} | "
+                f"CV:{bd.get('which_cv')}  |  "
                 f"tokens in={usage.get('input_tokens')} out={usage.get('output_tokens')}"
             )
 
@@ -493,5 +545,6 @@ class MatchingAgent:
             f"  Good   (70-84): {tiers['good']} jobs\n"
             f"  Ok     (60-69): {tiers['ok']} jobs\n"
             f"  Weak   (<60):   {tiers['weak']} jobs\n"
+            f"  Irrelevant:     {tiers['irrelevant']} jobs\n"
             f"  CV customisation triggered for: {cv_trigger} jobs"
         )

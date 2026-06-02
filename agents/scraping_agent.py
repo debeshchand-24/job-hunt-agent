@@ -47,6 +47,52 @@ _JOB_URL_RE = re.compile(
     re.IGNORECASE,
 )
 
+_PRIMARY_KEYWORDS = [
+    "product manager",
+    "product management",
+    "group product manager",
+    "principal product manager",
+    "associate product manager",
+    "senior product manager",
+    "lead product manager",
+    "director of product",
+    "director - product",
+    "vp product",
+    "head of product",
+    "chief product officer",
+    "gpm",
+    "apm",
+    "spm",
+]
+
+_EXCLUSION_KEYWORDS = [
+    "software engineer",
+    "software developer",
+    "data engineer",
+    "data scientist",
+    "machine learning",
+    "devops",
+    "backend",
+    "frontend",
+    "full stack",
+    "android",
+    "ios developer",
+    "qa engineer",
+    "test engineer",
+    "programme manager",
+    "program manager",
+    "project manager",
+    "scrum master",
+    "business analyst",
+    "data analyst",
+    "marketing manager",
+    "sales manager",
+    "account manager",
+    "hr manager",
+    "finance manager",
+    "operations manager",
+]
+
 
 # ---------------------------------------------------------------------------
 # HTML extractors
@@ -737,9 +783,17 @@ class ScrapingAgent:
     )
 
     def is_relevant_job(self, job_title: str, company: dict) -> bool:
-        keywords = company.get("filter_keywords", [])
         title_lower = job_title.lower()
-        return any(kw.lower() in title_lower for kw in keywords)
+
+        if any(kw in title_lower for kw in _EXCLUSION_KEYWORDS):
+            logger.debug(f"Excluded: {job_title} (contains exclusion keyword)")
+            return False
+
+        if not any(kw in title_lower for kw in _PRIMARY_KEYWORDS):
+            logger.debug(f"Excluded: {job_title} (no primary PM keyword found)")
+            return False
+
+        return True
 
     def is_relevant_location(self, location: str) -> bool:
         if not location or not location.strip():
